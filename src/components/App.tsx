@@ -8,14 +8,7 @@ import {UserModel} from '../models/UserModel';
 
 const logo = require('../resources/logo.svg');
 
-interface AppState {
-  user: UserModel;
-}
-
-interface AppProps {
-}
-
-class App extends React.Component<AppProps, AppState> {
+class App extends React.Component<{}, { user: UserModel }> {
 
   @lazyInject(Services.User)
   private user: User;
