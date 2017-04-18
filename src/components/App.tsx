@@ -11,10 +11,10 @@ const logo = require('../resources/logo.svg');
 class App extends React.Component<{}, { user: UserModel }> {
 
   @lazyInject(Services.User)
-  private user: User;
+  private userService: User;
 
   componentDidMount() {
-    this.user
+    this.userService
         .fetchUser()
         .then(user => this.setState({user: user}));
   }
