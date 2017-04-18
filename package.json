@@ -7,8 +7,12 @@
     "@types/node": "^7.0.12",
     "@types/react": "^15.0.21",
     "@types/react-dom": "^0.14.23",
+    "inversify": "^3.3.0",
+    "inversify-inject-decorators": "^3.0.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
     "react-scripts-ts": "1.2.0"
