@@ -3,18 +3,18 @@ import {
   injectable
 } from 'inversify';
 import FetchApi from '../../../utils/fetch';
-import {User} from '../User';
-import {Photo} from '../../Photo/Photo';
+import {UserService} from '../User';
+import {PhotoService} from '../../Photo/Photo';
 import Services from '../../index';
 
 @injectable()
-export class DefaultUser implements User {
+export class DefaultUserService implements UserService {
 
-  @inject(Services.Photo)
-  private photoService: Photo;
+  @inject(Services.PhotoService)
+  private photoService: PhotoService;
 
-  fetchUser() {
-    return FetchApi.fetch(new Request('https://jsonplaceholder.typicode.com/users/1'));
+  fetchUser(id: number) {
+    return FetchApi.fetch(new Request(`https://jsonplaceholder.typicode.com/users/${id}`));
   }
 
   getPhoto() {

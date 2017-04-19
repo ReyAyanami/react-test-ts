@@ -1,38 +1,31 @@
-import 'reflect-metadata';
 import * as React from 'react';
 import '../styles/App.css';
-import Services from '../services';
-import {User} from '../services/User/User';
-import {lazyInject} from '../inversify.config';
-import {UserModel} from '../models/UserModel';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route
+} from 'react-router-dom';
+import UsersComponent from '../pages/Users';
+import PhotosComponent from '../pages/Photos';
 
-const logo = require('../resources/logo.svg');
-
-class App extends React.Component<{}, { user: UserModel }> {
-
-  @lazyInject(Services.User)
-  private userService: User;
-
-  componentDidMount() {
-    this.userService
-        .fetchUser()
-        .then(user => this.setState({user: user}));
-  }
+class App extends React.Component<{}, null> {
 
   render() {
-    //noinspection TypeScriptUnresolvedVariable
-    const user: UserModel = this.state ? this.state.user : this.state;
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/users">Users</Link></li>
+            <li><Link to="/photos">Photos</Link></li>
+          </ul>
+
+          <hr/>
+
+          <Route path="/users" component={UsersComponent}/>
+          <Route path="/photos" component={PhotosComponent}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>{user ? user.name : ''}</p>
-      </div>
+      </Router>
     );
   }
 }

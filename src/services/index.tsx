@@ -1,6 +1,6 @@
 const Services = {
-  Photo: Symbol('Photo'),
-  User: Symbol('User')
+  PhotoService: Symbol('PhotoService'),
+  UserService: Symbol('UserService')
 };
 
 export default Services;
