@@ -1,8 +1,10 @@
 import 'reflect-metadata';
 import * as React from 'react';
-import Services from '../services';
 import {UserService} from '../services/User/User';
-import {lazyInject} from '../inversify.config';
+import {
+  lazyInject,
+  Services
+} from '../di-container';
 import {UserModel} from '../models/UserModel';
 
 class UsersComponent extends React.Component<{}, { user: UserModel }> {

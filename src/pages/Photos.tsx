@@ -1,7 +1,9 @@
 import 'reflect-metadata';
 import * as React from 'react';
-import Services from '../services';
-import {lazyInject} from '../inversify.config';
+import {
+  lazyInject,
+  Services
+} from '../di-container';
 import {PhotoModel} from '../models/PhotoModel';
 import {PhotoService} from '../services/Photo/Photo';
 

@@ -3,10 +3,14 @@ import {Container} from 'inversify';
 
 import getDecorators from 'inversify-inject-decorators';
 import {UserService} from './services/User/User';
-import Services from './services/index';
 import {DefaultUserService} from './services/User/impl/Default';
 import {PhotoService} from './services/Photo/Photo';
 import {DefaultPhotoService} from './services/Photo/impl/Default';
+
+export const Services = {
+  PhotoService: Symbol('PhotoService'),
+  UserService: Symbol('UserService')
+};
 
 const myContainer = new Container();
 myContainer.bind<UserService>(Services.UserService)

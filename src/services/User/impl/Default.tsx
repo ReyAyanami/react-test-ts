@@ -5,7 +5,7 @@ import {
 import FetchApi from '../../../utils/fetch';
 import {UserService} from '../User';
 import {PhotoService} from '../../Photo/Photo';
-import Services from '../../index';
+import {Services} from '../../../di-container';
 
 @injectable()
 export class DefaultUserService implements UserService {
