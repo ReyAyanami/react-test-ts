@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import * as React from 'react';
 import {UserService} from '../services/User/User';
 import {lazyInject} from '../di-container';
-import {UserModel} from '../models/UserModel';
+import {UserModel} from '../models/User';
 import {Services} from '../services/services';
 
 class UsersComponent extends React.Component<{}, { user: UserModel }> {

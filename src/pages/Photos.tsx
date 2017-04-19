@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import * as React from 'react';
 import {lazyInject} from '../di-container';
-import {PhotoModel} from '../models/PhotoModel';
+import {PhotoModel} from '../models/Photo';
 import {PhotoService} from '../services/Photo/Photo';
 import {Services} from '../services/services';
 
