@@ -8,7 +8,7 @@ import {
 import UsersComponent from './pages/Users';
 import PhotosComponent from './pages/Photos';
 
-class App extends React.Component<{}, null> {
+class RouterComponent extends React.Component<{}, null> {
 
   render() {
     return (
@@ -30,4 +30,4 @@ class App extends React.Component<{}, null> {
   }
 }
 
-export default App;
+export default RouterComponent;
