@@ -1,12 +1,12 @@
 import * as React from 'react';
-import '../styles/App.css';
+import './styles/App.css';
 import {
   BrowserRouter as Router,
   Link,
   Route
 } from 'react-router-dom';
-import UsersComponent from '../pages/Users';
-import PhotosComponent from '../pages/Photos';
+import UsersComponent from './pages/Users';
+import PhotosComponent from './pages/Photos';
 
 class App extends React.Component<{}, null> {
 
