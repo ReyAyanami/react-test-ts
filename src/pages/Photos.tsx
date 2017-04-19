@@ -1,11 +1,9 @@
 import 'reflect-metadata';
 import * as React from 'react';
-import {
-  lazyInject,
-  Services
-} from '../di-container';
+import {lazyInject} from '../di-container';
 import {PhotoModel} from '../models/PhotoModel';
 import {PhotoService} from '../services/Photo/Photo';
+import {Services} from '../services/services';
 
 class PhotosComponent extends React.Component<{}, { photo: PhotoModel }> {
 
